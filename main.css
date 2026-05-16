@@ -287,6 +287,7 @@ input[type="text"] {
 }
 
 .product__round-button {
+  box-sizing: border-box;
   font-weight: 600;
   height: 32px;
   width: 32px;
