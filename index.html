@@ -2,15 +2,78 @@
 <html>
 <head lang="uk">
     <meta charset="UTF-8">
-    <title>My Page</title>
-
-
+    <title>Buy list</title>
     <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 <body>
-	<span class="product-item">
-		Apple
-		<span class="amount">4</span>
-	</span>
+  <div class="main-wrapper">
+    <div class="main-container">
+      <div class="find-item">
+        <input type="text" class="find-item__input" name="find-item" placeholder="Назва товару" />
+        <button class="find-item__add-button" data-tooltip="Додати новий товар">Додати</button>
+      </div>
+  
+      <div class="product">
+        <span class="product__name product__crossed">Помідори</span>
+          <span class="product__amount">2</span>
+        <button class="product__buy-button" data-tooltip="Відмінити покупку">Не куплено</button>
+      </div>
+  
+      <div class="product">
+        <span class="product__name">Печиво</span>
+        <div class="product__counter">
+          <button class="product__round-button remove" data-tooltip="Зменшити">−</button>
+          <span class="product__amount">2</span>
+          <button class="product__round-button add" data-tooltip="Збільшити">+</button>
+        </div>
+        <div class="product__actions">
+          <button class="product__buy-button" data-tooltip="Позначити як куплене">Куплено</button>
+          <button class="product__cancel-button" data-tooltip="Видалити товар">х</button>
+        </div>
+      </div>
+  
+      <div class="product last-product">
+        <input type="text" class="product__input-field" value="Сир" />
+        <div class="product__counter">
+          <button class="product__round-button remove pale" data-tooltip="Зменшити">−</button>
+          <span class="product__amount">1</span>
+          <button class="product__round-button add pale" data-tooltip="Збільшити">+</button>
+        </div>
+        <div class="product__actions">
+          <button class="product__buy-button" data-tooltip="Позначити як куплене">Куплено</button>
+          <button class="product__cancel-button" data-tooltip="Видалити товар">х</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-container">
+      <h2 class="side-container__header">Залишилося</h1>
+      <div class="side-container__items">
+        <span class="product-item">
+          Печиво
+        <span class="product-item__amount">2</span>
+        </span>
+        <span class="product-item">
+          Сир
+        <span class="product-item__amount">1</span>
+        </span>
+      </div>
+  
+      <h2 class="side-container__header side-container__header--middle">Куплено</h1>
+      <div class="side-container__items">
+        <span class="product-item product-item__bought">
+          Помідори
+        <span class="product-item__amount">2</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="badge">
+    <div class="badge-info">
+      <span class="badge-title">BuyList</span>
+      <span class="personal-info"><br>Виконала: <br>Брюховецька Юліана</span>
+    </div>
+  </div>
 </body>
 </html>
