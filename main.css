@@ -1,6 +1,30 @@
+:root {
+  --bg-body: #d6d6d6;
+  --bg-card: white;
+  --border-color: #e0e0e0;
+  --divider-color: #d6d6d6;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+
+  --primary-color: rgb(86, 86, 243);
+  --secondary-bg: rgb(235, 231, 231);
+  --side-container-amount: rgb(255, 153, 0);
+  --border-special-color: #70ace8;
+  --accent-purple: #4b0082;
+  --badge-purple: #a100ff;
+  --badge-hover: #1a1abd;
+
+  --button-reduce-color: rgb(241, 54, 54);
+  --button-add-color: rgb(36, 199, 36);
+  --red: red;
+  
+  --text-main: #000000;
+  --text-muted: #555555;
+  --text-light: white;
+}
+
 html {
   font-family: sans-serif;
-  background-color: #d6d6d6;
+  background-color: var(--bg-body);
 }
 
 .main-wrapper {
@@ -13,10 +37,10 @@ html {
 }
 
 .main-container, .side-container {
-  background-color: white;
+  background-color: var(--bg-card);
   border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  border: 1px solid var(--border-color);
 }
 
 .main-container {
@@ -46,7 +70,7 @@ html {
   left: -20px;
   right: -20px;
   height: 1px;
-  background-color: #d6d6d6;
+  background-color: var(--divider-color);
 }
 
 .side-container__header--middle::before {
@@ -56,7 +80,7 @@ html {
   left: -15px;
   right: -15px;
   height: 1px;
-  background-color: #d6d6d6;
+  background-color: var(--divider-color);
 }
 
 .side-container__items {
@@ -102,7 +126,7 @@ html {
   left: -20px;
   right: -20px;
   height: 1px;
-  background-color: #d6d6d6;
+  background-color: var(--divider-color);
 }
 
 .product:last-child::after {
@@ -123,8 +147,8 @@ html {
   left: 50%;
   bottom: -5%;
   transform: translateX(-50%) translateY(100%) scale(0.5);
-  background-color: #4b0082;
-  color: white;
+  background-color: var(--accent-purple);
+  color: var(--text-light);
   padding: 5px 10px;
   border-radius: 8px;
   font-size: 12px;
@@ -162,7 +186,7 @@ html {
   left: -20px;
   right: -20px;
   height: 1px;
-  background-color: #d6d6d6;
+  background-color: var(--divider-color);
 }
 
 input[type="text"] {
@@ -171,7 +195,7 @@ input[type="text"] {
 
 .product-item {
   font-size: 12px;
-  background-color: rgb(235, 231, 231);
+  background-color: var(--secondary-bg);
   height: 25px;
   display: inline-block;
   padding: 5px;
@@ -185,9 +209,9 @@ input[type="text"] {
 
 .product-item__amount {
   font-weight: 600;
-  background-color: rgb(255, 153, 0);
+  background-color: var(--side-container-amount);
   border-radius: 10px;
-  color: white;
+  color: var(--text-light);
 
   display: inline-block;
   height: 20px;
@@ -198,8 +222,8 @@ input[type="text"] {
 
 .find-item__add-button {
   font-weight: 600;
-  background-color: rgb(86, 86, 243);
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--text-light);
   border: 0;
   border-radius: 0 4px 4px 0;
   padding: 5px 10px;
@@ -208,9 +232,9 @@ input[type="text"] {
 
 .product__buy-button {
   font-weight: 600;
-  color: #555;
+  color: var(--text-muted);
   padding: 8px 15px;
-  border: 1px solid #d6d6d6;
+  border: 1px solid var(--divider-color);
   border-radius: 4px;
   transition: 0.2s;
   cursor: pointer;
@@ -221,7 +245,7 @@ input[type="text"] {
 }
 
 .product__amount {
-  background-color: #d6d6d6;
+  background-color: var(--divider-color);
   padding: 5px 10px;
   border: 0;
   border-radius: 4px;
@@ -230,10 +254,10 @@ input[type="text"] {
 .product__input-field {
   height: 8px;
   width: 110px;
-  border: 2px solid #70ace8;
+  border: 2px solid var(--border-special-color);
   border-radius: 4px;
   font-size: 12px;
-  box-shadow: 0 0 7px #70ace8;
+  box-shadow: 0 0 7px var(--border-special-color);
 }
 
 .product__buy-button, 
@@ -254,8 +278,8 @@ input[type="text"] {
   font-weight: 600;
   height: 32px;
   width: 32px;
-  background-color: red;
-  color: white;
+  background-color: var(--red);
+  color: var(--text-light);
   border: 0;
   border-radius: 4px;
   padding: 5px 10px;
@@ -273,21 +297,21 @@ input[type="text"] {
 }
 
 .remove {
-  color: white;
-  background-color: rgb(241, 54, 54);
+  color: var(--text-light);
+  background-color: var(--button-reduce-color);
 }
 
 .add {
-  color: white;
-  background-color: rgb(36, 199, 36);
+  color: var(--text-light);
+  background-color: var(--button-add-color);
 }
 
 .badge {
   position: fixed;
   bottom: 0;
   left: 20px;
-  background-color: #a100ff;
-  color: white;
+  background-color: var(--badge-purple);
+  color: var(--text-light);
   padding: 10px 20px;
   border-radius: 10px 10px 0 0;
   cursor: pointer;
@@ -312,7 +336,7 @@ input[type="text"] {
 
 .badge:hover {
   height: 90px;
-  background-color: #1a1abd;
+  background-color: var(--badge-hover);
 }
 
 .badge:hover .personal-info {
@@ -321,13 +345,13 @@ input[type="text"] {
 
 @media print {
   body {
-    background-color: white;
+    background-color: var(--bg-card);
   }
   .badge {
     height: 90px;
-    background-color: white;
-    color: #000;
-    border: 2px solid #000;
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    border: 2px solid var(--text-main);
     bottom: 10px;
   }
   .badge-title {
@@ -336,7 +360,7 @@ input[type="text"] {
   }
 
   .personal-info {
-    color: #000;
+    color: var(--text-main);
     opacity: 1;
   }
 }
